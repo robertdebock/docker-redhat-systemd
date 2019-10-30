@@ -2,8 +2,8 @@ FROM registry.access.redhat.com/ubi7/ubi
 LABEL maintainer="Robert de Bock"
 ENV container=docker
 
-RUN cd /lib/systemd/system/sysinit.target.wants/; \
-    for i in *; do [ $i = systemd-tmpfiles-setup.service ] || rm -f $i; done ; \
+RUN cd /lib/systemd/system/sysinit.target.wants/ ; \
+    for i in * ; do [ $i = systemd-tmpfiles-setup.service ] || rm -f $i ; done ; \
     rm -f /lib/systemd/system/multi-user.target.wants/* ; \
     rm -f /etc/systemd/system/*.wants/* ; \
     rm -f /lib/systemd/system/local-fs.target.wants/* ; \
