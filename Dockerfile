@@ -1,5 +1,7 @@
 FROM registry.access.redhat.com/ubi8/ubi
-LABEL maintainer="Robert de Bock"
+
+LABEL maintainer="Robert de Bock <robert@meinit.nl>"
+
 ENV container=docker
 
 RUN cd /lib/systemd/system/sysinit.target.wants/ ; \
@@ -13,4 +15,5 @@ RUN cd /lib/systemd/system/sysinit.target.wants/ ; \
     rm -f /lib/systemd/system/anaconda.target.wants/*
 
 VOLUME ["/sys/fs/cgroup"]
+
 CMD ["/sbin/init"]
