@@ -3,6 +3,8 @@ Docker RedHat Systemd
 
 This Dockerfile can build containers capable to use systemd.
 
+[![redhat build status](https://img.shields.io/docker/cloud/build/robertdebock/redhat.svg)](https://hub.docker.com/repository/docker/robertdebock/redhat)
+
 Branches
 --------
 
